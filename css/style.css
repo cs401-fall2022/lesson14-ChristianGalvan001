@@ -1,0 +1,91 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #dddddd;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1140px;
+    background-color: #ffffff;
+    height: auto;
+    margin: 40px auto;
+    padding: 20px
+}
+
+h1{
+    font-size: 30px;
+    margin:0;
+}
+
+.clear{
+    clear:both;
+}
+
+nav{
+    float:left;
+    width: 100%;
+    background-color: #8D8741;
+    text-align: center;
+    padding: 30px 15px;
+    margin-bottom: 20px;
+}
+
+.codeBlock {
+    border-width: 3px;
+    border-style:solid;
+    border-color: blue;
+    background-color: #659DBD;
+    font-size: 18px;
+    padding: 1em;
+}
+
+header{
+    float:left;
+    width: 100%;
+    background-color: #659DBD;
+    text-align: center;
+    padding: 50px 15px;
+    color: #fff;
+}
+
+.section1{
+    float:left;
+    width:100%;
+    background-color: #DAAD86;
+    text-align: center;
+    padding: 50px 10px;
+    margin-bottom: 20px;
+}
+
+.secition1 .content{
+    float:left;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.section1 .content .card{
+    width: 100%;
+    float: left;
+    padding: 20px 10px;
+}
+
+.section1 .content .card .box{
+    background-color: #FBEEC1;
+    text-align: left;
+    font-size: 16px;
+    color: #000;
+    padding: 100px 15px;
+}
+
+footer{
+    float:left;
+    width: 100%;
+    background-color: #dddddd;
+    text-align: center;
+    padding: 50px 10px;
+}
+

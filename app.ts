@@ -4,11 +4,11 @@ function hello(): String{
 
 function turnRed(){
     if(document != null){
-        let c = document.getElementById("demo").style.color;
+        let c = document.getElementById("demo").style.backgroundColor;
         if(c === 'red'){
-            document.getElementById("demo").style.color = "black";
+            document.getElementById("demo").style.backgroundColor = "white";
         } else {
-            document.getElementById("demo").style.color = "red";
+            document.getElementById("demo").style.backgroundColor = "red";
         }
     }
 }

@@ -8,12 +8,12 @@ exports.hello = hello;
 ;
 function turnRed() {
     if (document != null) {
-        var c = document.getElementById("demo").style.color;
+        var c = document.getElementById("demo").style.backgroundColor;
         if (c === 'red') {
-            document.getElementById("demo").style.color = "black";
+            document.getElementById("demo").style.backgroundColor = "white";
         }
         else {
-            document.getElementById("demo").style.color = "red";
+            document.getElementById("demo").style.backgroundColor = "red";
         }
     }
 }

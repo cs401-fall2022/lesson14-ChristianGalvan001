@@ -58,17 +58,18 @@
                             <br>
                         <div class="codeBlock">
                             <span style="color: rgb(0, 255, 0)">interface</span> <span style="color: yellow">User</span> { <br>
-                                &emsp;&emsp;<span style="color: rgb(0, 255, 0)">name</span>: <span style="color: yellow">string;</span> <br>
-                                &emsp;&emsp;id: number; <br>
+                                &emsp;&emsp;<span style="color: rgb(0, 255, 0)">name</span>: <span style="color: orange">string</span>; <br>
+                                &emsp;&emsp;<span style="color: rgb(0, 255, 0)">id</span>: <span style="color: orange">number</span>; <br>
                             }
                         </div>
                         <br>
                         One can also create an object with an inferred type using the following:
                         <br>
+                        <br>
                         <div class="codeBlock">
-                            const user = { <br>
-                            &emsp;&emsp;name: "Bob"; <br>
-                            &emsp;&emsp;id: 11; <br>
+                            <span style="color: rgb(0, 255, 0)">const</span> <span style="color: yellow">user</span> = { <br>
+                            &emsp;&emsp;<span style="color: rgb(0, 255, 0)">name</span>: <span style="color: orange">"Bob"</span>; <br>
+                            &emsp;&emsp;<span style="color: rgb(0, 255, 0)">id</span>: <span style="color: orange">11</span>; <br>
                             };
                         </div>
                         <br>
@@ -77,9 +78,9 @@
                         <br>
                         <br>
                         <div class="codeBlock">
-                            const user: User { <br>
-                            &emsp;&emsp;name: "Bob"; <br>
-                            &emsp;&emsp;id: 11; <br>
+                            <span style="color: rgb(0, 255, 0)">const</span> <span style="color: yellow">user</span>: <span style="color: orange">User</span> { <br>
+                            &emsp;&emsp;<span style="color: rgb(0, 255, 0)">name</span>: <span style="color: orange">"Bob"</span>; <br>
+                            &emsp;&emsp;<span style="color: rgb(0, 255, 0)">id</span>: <span style="color: orange">11</span>; <br>
                             };
                         </div>
                         <br>
@@ -87,19 +88,19 @@
                         <br>
                         <br>
                         <div class="codeBlock">
-                            interface User { <br>
-                            &emsp;&emsp;name: string; <br>
-                            &emsp;&emsp;id: number; <br>
+                            <span style="color: rgb(0, 255, 0)">interface</span> <span style="color: yellow">User</span> { <br>
+                            &emsp;&emsp;<span style="color: rgb(0, 255, 0)">name</span>: <span style="color: yellow">string</span>; <br>
+                            &emsp;&emsp;<span style="color: rgb(0, 255, 0)">id</span>: <span style="color: yellow">number</span>; <br>
                             }
                             <br>
                             <br>
-                            const user: User { <br>
-                            &emsp;&emsp;name: "Bob";
+                            <span style="color: rgb(0, 255, 0)">const</span> <span style="color: yellow">user</span>: <span style="color: orange">User</span> { <br>
+                            &emsp;&emsp;<span style="color: rgb(0, 255, 0)">name</span>: <span style="color: yellow">"Bob"</span>;
                             <p>
                             <span style="background-color: rgb(248, 82, 82);">Type '{ username: string; id: number; }' is not assignable to type 'User'.
                             Object literal may only specify known properties, and 'username' does not exist in type 'User'.</span>
                             </p>
-                            &emsp;&emsp;id: 11; <br>
+                            &emsp;&emsp;<span style="color: rgb(0, 255, 0)">id</span>: <span style="color: yellow">11</span>; <br>
                             };
                         </div>
                         <br>
@@ -107,23 +108,23 @@
                         <br>
                         <br>
                         <div class="codeBlock">
-                            interface User { <br>
-                            &emsp;&emsp;name: string; <br>
-                            &emsp;&emsp;id: number; <br>
+                            <span style="color: rgb(0, 255, 0)">interface</span> <span style="color: yellow">User</span> { <br>
+                            &emsp;&emsp;<span style="color: rgb(0, 255, 0)">name</span>: <span style="color: yellow">string</span>; <br>
+                            &emsp;&emsp;<span style="color: rgb(0, 255, 0)">id</span>: <span style="color: yellow">number</span>; <br>
                             }
                             <br>
                             <br>
-                            class UserAccount {<br>
-                            &emsp;&emsp;name: string;<br>
-                            &emsp;&emsp;id: number;<br>
+                            <span style="color: rgb(0, 255, 0)">class</span> <span style="color: yellow">UserAccount</span> {<br>
+                            &emsp;&emsp;<span style="color: rgb(0, 255, 0)">name</span>: <span style="color: yellow">string</span>;<br>
+                            &emsp;&emsp;<span style="color: rgb(0, 255, 0)">id</span>: <span style="color: yellow">number</span>;<br>
                             <br>
-                            constructor(name: string, id: number) {<br>
-                            &emsp;&emsp;this.name = name;<br>
-                            &emsp;&emsp;this.id = id;<br>
+                            <span style="color: orange">constructor</span>(<span style="color: rgb(0, 255, 0)">name</span>: <span style="color: yellow">string</span>, <span style="color: rgb(0, 255, 0)">id</span>: <span style="color: yellow">number</span>) {<br>
+                            &emsp;&emsp;<span style="color: rgb(0, 255, 0)">this.name</span> = <span style="color: yellow">name</span>;<br>
+                            &emsp;&emsp;<span style="color: rgb(0, 255, 0)">this.id</span> = <span style="color: yellow">id</span>;<br>
                             &emsp;&emsp;}<br>
                             }<br>
                             <br>
-                            const user: User = new UserAccount("Bob", 1);<br>
+                            <span style="color: rgb(0, 255, 0)">const</span> <span style="color: yellow">user</span>: <span style="color: orange">User</span> = new <span style="color: orange">UserAccount</span>("Bob", 1);<br>
                         </div>
                         </p>
                     </div>
@@ -135,17 +136,17 @@
                             TypeScript allows for one to create their own Types. This can be done by using Unions:
                             <br>
                         <div class="codeBlock">
-                            type MyBool = true | false;
+                            <span style="color: orange">type</span> <span style="color: yellow">MyBool</span> = true | false;
                         </div>
                         <br>
                         In the same manner you are allowed to set what literals are allowed to be:
                         <br>
                         <div class="codeBlock">
-                            type motorState = "running" | "stopped";
+                            <span style="color: orange">type</span> <span style="color: yellow">motorState</span> = "running" | "stopped";
                         </div>
                         <br>
                         <div class="codeBlock">
-                            type doorNumbers = 226 | 336 | 112 | 189;
+                            <span style="color: orange">type</span> <span style="color: yellow">doorNumbers</span> = 226 | 336 | 112 | 189;
                         </div>
                         </p>
                     </div>
@@ -198,11 +199,11 @@
                         <br>
                         <br>
                         <div class="codeBlock">
-                            function wrapInArray(obj: string | string[]) {<br>
-                            &emsp;&emsp;if (typeof obj === "string") {<br>
-                            &emsp;&emsp;&emsp;return [obj];<br>
+                            <span style="color: rgb(0, 255, 0)">function</span> <span style="color: orange">wrapInArray</span>(<span style="color: yellow">obj</span>: string | <span style="color: yellow">string[]</span>) {<br>
+                            &emsp;&emsp;<span style="color: rgb(0, 255, 0)">if</span> (typeof <span style="color: rgb(0, 255, 0)">obj</span> === "string") {<br>
+                            &emsp;&emsp;&emsp;<span style="color: orange">return</span> [<span style="color: rgb(0, 255, 0)">obj</span>];<br>
                             &emsp;&emsp;}<br>
-                            &emsp;&emsp;return obj;<br>
+                            &emsp;&emsp;<span style="color: orange">return</span> <span style="color: rgb(0, 255, 0)">obj</span>;<br>
                             }<br>
                         </div>
                         </p>
@@ -216,9 +217,9 @@
                             An array's values can be described by generics such as:
                             <br>
                         <div class="codeBlock">
-                            type StringArray = Array&lt;string&gt;;<br>
-                                type NumberArray = Array&lt;number&gt;;<br>
-                                    type ObjectWithNameArray = Array&lt;{ name: string }&gt;;
+                            <span style="color: orange">type</span> StringArray = <span style="color: yellow">Array</span>&lt;<span style="color: rgb(0, 255, 0)">string</span>&gt;;<br>
+                            <span style="color: orange">type</span> NumberArray = <span style="color: yellow">Array</span>&lt;<span style="color: rgb(0, 255, 0)">number</span>&gt;;<br>
+                            <span style="color: orange">type</span> ObjectWithNameArray = <span style="color: yellow">Array</span>&lt;<span style="color: rgb(0, 255, 0)">{ name: string }</span>&gt;;
                         </div>
                         </p>
                     </div>
@@ -248,12 +249,12 @@
                         
                         <div class="codeBlock">
                             {<br>
-                            &emsp;&emsp;"compilerOptions": {<br>
-                            &emsp;&emsp;"outDir": "./built",<br>
-                            &emsp;&emsp;"allowJs": true,<br>
-                            &emsp;&emsp;"target": "es5"<br>
+                            &emsp;&emsp;<span style="color: orange">compilerOptions"</span>: {<br>
+                            &emsp;&emsp;<span style="color: orange">"outDir"</span>: "./built",<br>
+                            &emsp;&emsp;<span style="color: orange">"allowJs"</span>: true,<br>
+                            &emsp;&emsp;<span style="color: orange">"target"</span>: "es5"<br>
                             &emsp;&emsp;}<br>
-                            &emsp;&emsp;"include": ["./src/**/*"]<br>
+                            &emsp;&emsp;<span style="color: orange">"include"</span>: ["./src/**/*"]<br>
                             }
                         </div>
                         <br>

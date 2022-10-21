@@ -47,10 +47,11 @@ nav{
 .codeBlock {
     border-width: 3px;
     border-style:solid;
-    border-color: blue;
-    background-color: #659DBD;
+    border-color: rgb(0, 0, 0);
+    background-color: #000000;
     font-size: 18px;
     padding: 1em;
+    color: white;
 }
 
 header{

@@ -45,9 +45,9 @@ nav{
 }
 
 .codeBlock {
-    border-width: 3px;
+    border-width: 10px;
     border-style:solid;
-    border-color: rgb(0, 0, 0);
+    border-color: rgb(255, 255, 255);
     background-color: #000000;
     font-size: 18px;
     padding: 1em;

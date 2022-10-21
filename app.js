@@ -2,6 +2,7 @@
 exports.__esModule = true;
 exports.turnRed = exports.hello = void 0;
 function hello() {
+    console.log("Hello World");
     return "Hello World";
 }
 exports.hello = hello;

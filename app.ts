@@ -1,4 +1,5 @@
 function hello(): String{
+    console.log("Hello World")
     return "Hello World";
 };
 

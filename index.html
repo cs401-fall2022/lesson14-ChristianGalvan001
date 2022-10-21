@@ -25,7 +25,7 @@
                 <div class = "content">
                 <div class = "card">
                     <div class="box">
-                        <h3>Types by Inference</h3>
+                        <h2>Types by Inference</h2>
                         <p>
                             Unlike JavaScript the TypeScript language was
                             built to generate the types for the user automatically.
@@ -48,67 +48,178 @@
                 </div>
                 <div class="card">
                     <div class="box">
-                        <h3>Types by Inference</h3>
+                        <h2>Defining Types</h2>
                         <p>
-                            Unlike JavaScript the TypeScript language was
-                            built to generate the types for the user automatically.
-                            Therefore, allowing programmers to assign variables to a particular
-                            value without specifying the type.
+                            To correct possible errors in inferring types in TypeScript you can tell TypeSript
+                            what the type should be. You must describe the object using an interface.
                             <br>
                             <br>
-                            For Example, in TypeScript assigning a value to a variable would look like this,
-                            <br>
+                            For Example, one can explicitly describe an object's shape using the following:
                             <br>
                         <div class="codeBlock">
-                            let hellowWorld = "Hello World";
+                            interface User { <br>
+                                &emsp;&emsp;name: string; <br>
+                                &emsp;&emsp;id: number; <br>
+                            }
                         </div>
                         <br>
-                        TypeScript can achieve this by knowing how JavaScript works. This allows
-                        the language to infer what type the user is assigning to a variable.
+                        One can also create an object with an inferred type using the following:
+                        <br>
+                        <div class="codeBlock">
+                            const user = { <br>
+                            &emsp;&emsp;name: "Bob"; <br>
+                            &emsp;&emsp;id: 11; <br>
+                            };
+                        </div>
+                        <br>
+                        Then you can declare that your JavaScript object conforms to the shape defined
+                        by your interface by using the following:
+                        <br>
+                        <br>
+                        <div class="codeBlock">
+                            const user: User { <br>
+                            &emsp;&emsp;name: "Bob"; <br>
+                            &emsp;&emsp;id: 11; <br>
+                            };
+                        </div>
+                        <br>
+                        If the object doesn't match the interface you defined then TypeScript will warn you:
+                        <br>
+                        <br>
+                        <div class="codeBlock">
+                            interface User { <br>
+                            &emsp;&emsp;name: string; <br>
+                            &emsp;&emsp;id: number; <br>
+                            }
+                            <br>
+                            <br>
+                            const user: User { <br>
+                            &emsp;&emsp;name: "Bob";
+                            <p>
+                            <span style="background-color: rgb(248, 82, 82);">Type '{ username: string; id: number; }' is not assignable to type 'User'.
+                            Object literal may only specify known properties, and 'username' does not exist in type 'User'.</span>
+                            </p>
+                            &emsp;&emsp;id: 11; <br>
+                            };
+                        </div>
+                        <br>
+                        TypeScript supports object-oriented programming. Therefore, you can use an interface declaration with classes:
+                        <br>
+                        <br>
+                        <div class="codeBlock">
+                            interface User { <br>
+                            &emsp;&emsp;name: string; <br>
+                            &emsp;&emsp;id: number; <br>
+                            }
+                            <br>
+                            <br>
+                            class UserAccount {<br>
+                            &emsp;&emsp;name: string;<br>
+                            &emsp;&emsp;id: number;<br>
+                            <br>
+                            constructor(name: string, id: number) {<br>
+                            &emsp;&emsp;this.name = name;<br>
+                            &emsp;&emsp;this.id = id;<br>
+                            &emsp;&emsp;}<br>
+                            }<br>
+                            <br>
+                            const user: User = new UserAccount("Bob", 1);<br>
+                        </div>
                         </p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
-                        <h3>Types by Inference</h3>
+                        <h2>Composing Types</h2>
                         <p>
-                            Unlike JavaScript the TypeScript language was
-                            built to generate the types for the user automatically.
-                            Therefore, allowing programmers to assign variables to a particular
-                            value without specifying the type.
-                            <br>
-                            <br>
-                            For Example, in TypeScript assigning a value to a variable would look like this,
-                            <br>
+                            TypeScript allows for one to create their own Types. This can be done by using Unions:
                             <br>
                         <div class="codeBlock">
-                            let hellowWorld = "Hello World";
+                            type MyBool = true | false;
                         </div>
                         <br>
-                        TypeScript can achieve this by knowing how JavaScript works. This allows
-                        the language to infer what type the user is assigning to a variable.
+                        In the same manner you are allowed to set what literals are allowed to be:
+                        <br>
+                        <div class="codeBlock">
+                            type motorState = "running" | "stopped";
+                        </div>
+                        <br>
+                        <div class="codeBlock">
+                            type doorNumbers = 226 | 336 | 112 | 189;
+                        </div>
                         </p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
-                        <h3>Types by Inference</h3>
+                        <h2>Using typeof</h2>
                         <p>
-                            Unlike JavaScript the TypeScript language was
-                            built to generate the types for the user automatically.
-                            Therefore, allowing programmers to assign variables to a particular
-                            value without specifying the type.
+                        TypeScript allows the use of the "typeof" operator that can be used to 
+                        learn the type of a variable.
+                        <br>
+                        <br>
+                        Below are some examples of how you could check different types:
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th>Type</th>
+                                        <th>Predicate</th>
+                                    </tr>
+                                    <tr>
+                                        <th>String</th>
+                                        <th>typeof s ==== "string"</th>
+                                    </tr>
+                                    <tr>
+                                        <th>number</th>
+                                        <th>typeof n ==== "number"</th>
+                                    </tr>
+                                    <tr>
+                                        <th>boolean</th>
+                                        <th>typeof b ==== "boolean"</th>
+                                    </tr>
+                                    <tr>
+                                        <th>undefined</th>
+                                        <th>typeof undefined ==== "undefined"</th>
+                                    </tr>
+                                    <tr>
+                                        <th>function</th>
+                                       <th>typeof f ==== "function"</th>
+                                    </tr>
+                                    <tr>
+                                        <th>array</th>
+                                        <th>Array.isArray(a)</th>
+                                    </tr>
+                                </tbody>
+                            </table>
                             <br>
                             <br>
-                            For Example, in TypeScript assigning a value to a variable would look like this,
-                            <br>
+
+                        The following function returns different values depending on whether its passed in a string or an array:
+                        <br>
+                        <br>
+                        <div class="codeBlock">
+                            function wrapInArray(obj: string | string[]) {<br>
+                            &emsp;&emsp;if (typeof obj === "string") {<br>
+                            &emsp;&emsp;&emsp;return [obj];<br>
+                            &emsp;&emsp;}<br>
+                            &emsp;&emsp;return obj;<br>
+                            }<br>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h2>Generics</h2>
+                        <p>
+                            In TypeScript one can use generics to provide variables to types. An example of this is an array.
+                            An array's values can be described by generics such as:
                             <br>
                         <div class="codeBlock">
-                            let hellowWorld = "Hello World";
+                            type StringArray = Array&lt;string&gt;;<br>
+                                type NumberArray = Array&lt;number&gt;;<br>
+                                    type ObjectWithNameArray = Array&lt;{ name: string }&gt;;
                         </div>
-                        <br>
-                        TypeScript can achieve this by knowing how JavaScript works. This allows
-                        the language to infer what type the user is assigning to a variable.
                         </p>
                     </div>
                 </div>
@@ -116,35 +227,50 @@
         </section>
 
         <section class="section1">
-            <h1>Another Section</h1>
+            <h1>Migrating From JavaScript</h1>
             <div class="content">
                 <div class="card">
                     <div class="box">
-        
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
+                        <h2>Writing a Config File</h2>
+                        <p>
+                            TypeScript uses a file called tsconfig.json for managing your project's
+                            options, such as which files you want to include and what sorts of checking
+                            you want to perform.<br>
+                            <br>
+                            Here we're specifying a few things to TypeScript:
+                            <br>
+                            &emsp;&emsp;1. Read in any files it understands in the src directory (with include).<br>
+                            &emsp;&emsp;2. Accept JavaScript files as inputs (with allowJs).<br>
+                            &emsp;&emsp;3. Emit all of the output files in built (with outDir).<br>
+                            &emsp;&emsp;4. Translate newer JavaScript constructs down to an older version like ECMAScript 5(using target).
+                            <br>
+                            <br>
                         
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        
+                        <div class="codeBlock">
+                            {<br>
+                            &emsp;&emsp;"compilerOptions": {<br>
+                            &emsp;&emsp;"outDir": "./built",<br>
+                            &emsp;&emsp;"allowJs": true,<br>
+                            &emsp;&emsp;"target": "es5"<br>
+                            &emsp;&emsp;}<br>
+                            &emsp;&emsp;"include": ["./src/**/*"]<br>
+                            }
+                        </div>
+                        <br>
+                        At this point, if you try running tsc at the root of your project, you should see output files in the built directory.
+                        The layout of the files in built should look identical to the layout of src. You should now have TypeScript working with
+                        your project.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
-
         
 
         <footer>
-            <h1 id="demo" onclick="turnRed()">Link to new page</h1>
+            <p>
+                Created by: Christian Galvan
+            </p>
         </footer>
         <div class ="clear">
         </div>

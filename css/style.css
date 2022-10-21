@@ -1,7 +1,9 @@
+
+
 body{
     margin: 0;
     font-family: sans-serif;
-    background-color: #dddddd;
+    background-color: rgb(224, 187, 84);
 }
 
 *{
@@ -26,6 +28,11 @@ button{
 }
 .clear{
     clear:both;
+}
+
+table, th, td {
+    border: 1px solid black;
+    color: rgb(40, 43, 238);
 }
 
 nav{
